@@ -1,0 +1,6 @@
+git remote add photo1 https://github.com/YourName/YourRepo.git
+git pull https://github.com/YourName/YourRepo.git
+git add NewFile.sql
+git commit -m "commit comment"
+git pull https://github.com/YourName/YourRepo.git
+git push photo1 master
