@@ -1,0 +1,52 @@
+2014-12-22 11:13:11,459 Started
+2014-12-22 11:13:11,460 printDictionnary ************
+2014-12-22 11:13:11,460 printDictionnary ************
+2014-12-22 11:13:11,460 compareDictionnaries ************
+2014-12-22 11:13:11,460 Difference : Product : Product01  : TypeFilm : JT: 1st : 100 : 2nd : 101
+2014-12-22 11:13:11,460 Product only in Second file : Product07 : values : {'JT': '120'}
+2014-12-22 11:13:11,460 Finished
+2014-12-22 11:14:49,996 Started
+2014-12-22 11:14:49,996 compareDictionnaries ************
+2014-12-22 11:14:49,996 Difference : Product : Product01  : TypeFilm : JT: 1st : 100 : 2nd : 101
+2014-12-22 11:14:49,996 Product only in Second file : Product07 : values : {'JT': '120'}
+2014-12-22 11:14:49,996 Finished
+2014-12-22 11:16:13,188 Started
+2014-12-22 11:16:13,188 printDictionnary ************
+2014-12-22 11:16:13,188 key : Product04 : value : {'JL': '120', 'JT': '120'}
+2014-12-22 11:16:13,188 key : Product05 : value : {'JL': '120', 'JT': '120'}
+2014-12-22 11:16:13,188 key : Product06 : value : {'JL': '120', 'JT': '120'}
+2014-12-22 11:16:13,189 key : Product01 : value : {'JL': '120', 'JT': '100'}
+2014-12-22 11:16:13,189 key : Product02 : value : {'JL': '120', 'JT': '120'}
+2014-12-22 11:16:13,189 key : Product03 : value : {'JL': '120', 'JT': '120', 'SYNC': '120'}
+2014-12-22 11:16:13,189 printDictionnary ************
+2014-12-22 11:16:13,189 key : Product04 : value : {'JL': '120', 'JT': '120'}
+2014-12-22 11:16:13,189 key : Product05 : value : {'JL': '120', 'JT': '120'}
+2014-12-22 11:16:13,189 key : Product06 : value : {'JT': '120', 'JL': '120'}
+2014-12-22 11:16:13,189 key : Product07 : value : {'JT': '120'}
+2014-12-22 11:16:13,189 key : Product01 : value : {'JL': '120', 'JT': '101'}
+2014-12-22 11:16:13,189 key : Product02 : value : {'JL': '120', 'JT': '120'}
+2014-12-22 11:16:13,189 key : Product03 : value : {'JL': '120', 'JT': '120', 'SYNC': '120'}
+2014-12-22 11:16:13,189 compareDictionnaries ************
+2014-12-22 11:16:13,189 Difference : Product : Product01  : TypeFilm : JT: 1st : 100 : 2nd : 101
+2014-12-22 11:16:13,190 Product only in Second file : Product07 : values : {'JT': '120'}
+2014-12-22 11:16:13,190 Finished
+2014-12-22 14:07:52,104 Started
+2014-12-22 14:07:52,105 printDictionnary ************
+2014-12-22 14:07:52,105 key : Product04 : value : {'JL': '120', 'JT': '120'}
+2014-12-22 14:07:52,105 key : Product05 : value : {'JL': '120', 'JT': '120'}
+2014-12-22 14:07:52,105 key : Product06 : value : {'JL': '120', 'JT': '120'}
+2014-12-22 14:07:52,105 key : Product01 : value : {'JL': '120', 'JT': '100'}
+2014-12-22 14:07:52,105 key : Product02 : value : {'JL': '120', 'JT': '120'}
+2014-12-22 14:07:52,105 key : Product03 : value : {'JL': '120', 'JT': '120', 'SYNC': '120'}
+2014-12-22 14:07:52,105 printDictionnary ************
+2014-12-22 14:07:52,105 key : Product04 : value : {'JL': '120', 'JT': '120'}
+2014-12-22 14:07:52,105 key : Product05 : value : {'JL': '120', 'JT': '120'}
+2014-12-22 14:07:52,105 key : Product06 : value : {'JT': '120', 'JL': '120'}
+2014-12-22 14:07:52,105 key : Product07 : value : {'JT': '120'}
+2014-12-22 14:07:52,106 key : Product01 : value : {'JL': '120', 'JT': '101'}
+2014-12-22 14:07:52,106 key : Product02 : value : {'JL': '120', 'JT': '120'}
+2014-12-22 14:07:52,106 key : Product03 : value : {'JL': '120', 'JT': '120', 'SYNC': '120'}
+2014-12-22 14:07:52,106 compareDictionnaries ************
+2014-12-22 14:07:52,106 Difference : Product : Product01  : TypeFilm : JT: 1st : 100 : 2nd : 101
+2014-12-22 14:07:52,106 Product only in Second file : Product07 : values : {'JT': '120'}
+2014-12-22 14:07:52,106 Finished
