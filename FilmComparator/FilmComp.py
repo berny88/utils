@@ -4,6 +4,18 @@ import csv
 import sys
 
 import structcsv
+#
+# Syntax : python FilmComp.py File1.csv File2.csv
+# build a structure of data for each Product : the structure defines
+# the quantity of product
+# for a type of film (JT/JL/SYNC)
+# Structure of csv : TYPEEXPORT;COMPUTING_DATE;ID_PRODUCT;TYPE_FILM;QTY
+# where :
+#TYPEEXPORT define the kinf od "Film" FBB or FBPC...
+# COMPUTING_DATE : the date of compute
+# ID_PRODUCt : product code
+# TYPE_FILM = JT/JL/SYNC
+# QTY : quantity of parts for a product code
 
 
 # ******************
