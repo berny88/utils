@@ -39,8 +39,8 @@ def populateOneKey(productList, row):
 
 # *****************************
 # display the content of a dictionnary
-def printDictionnary(theDict):
-    logging.debug("printDictionnary ************")
+def printDictionnary(theDict, fileName):
+    logging.debug("printDictionnary : %s ************", fileName)
     for key, value in theDict.iteritems():
         logging.debug("key : %s : value : %s", key, value)
 
@@ -85,8 +85,8 @@ def main():
         firstProductDict = ExtractProductList(firstFile)
         secondProductDict = ExtractProductList(secondFile)
         #display to console
-        printDictionnary(firstProductDict)
-        printDictionnary(secondProductDict)
+        printDictionnary(firstProductDict, sys.argv[1])
+        printDictionnary(secondProductDict, sys.argv[2])
         # compare dictionnaries
         compareDictionnaries(firstProductDict, secondProductDict)
     finally:
