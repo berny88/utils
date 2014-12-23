@@ -50,3 +50,44 @@
 2014-12-22 14:07:52,106 Difference : Product : Product01  : TypeFilm : JT: 1st : 100 : 2nd : 101
 2014-12-22 14:07:52,106 Product only in Second file : Product07 : values : {'JT': '120'}
 2014-12-22 14:07:52,106 Finished
+2014-12-22 16:26:09,112 Started
+2014-12-22 16:26:09,112 printDictionnary ************
+2014-12-22 16:26:09,112 key : Product04 : value : {'JL': '120', 'JT': '120'}
+2014-12-22 16:26:09,112 key : Product05 : value : {'JL': '120', 'JT': '120'}
+2014-12-22 16:26:09,112 key : Product06 : value : {'JL': '120', 'JT': '120'}
+2014-12-22 16:26:09,112 key : Product01 : value : {'JL': '120', 'JT': '100'}
+2014-12-22 16:26:09,112 key : Product02 : value : {'JL': '120', 'JT': '120'}
+2014-12-22 16:26:09,113 key : Product03 : value : {'JL': '120', 'JT': '120', 'SYNC': '120'}
+2014-12-22 16:26:09,113 printDictionnary ************
+2014-12-22 16:26:09,113 key : Product04 : value : {'JL': '120', 'JT': '120'}
+2014-12-22 16:26:09,113 key : Product05 : value : {'JL': '120', 'JT': '120'}
+2014-12-22 16:26:09,113 key : Product06 : value : {'JT': '120', 'JL': '120'}
+2014-12-22 16:26:09,113 key : Product07 : value : {'JT': '120'}
+2014-12-22 16:26:09,113 key : Product01 : value : {'JL': '120', 'JT': '101'}
+2014-12-22 16:26:09,113 key : Product02 : value : {'JL': '120', 'JT': '120'}
+2014-12-22 16:26:09,113 key : Product03 : value : {'JL': '120', 'JT': '120', 'SYNC': '120'}
+2014-12-22 16:26:09,113 compareDictionnaries ************
+2014-12-22 16:26:09,113 Difference : Product : Product01  : TypeFilm : JT: 1st : 100 : 2nd : 101
+2014-12-22 16:26:09,113 Product only in Second file : Product07 : values : {'JT': '120'}
+2014-12-22 16:26:09,119 Finished
+2014-12-22 18:25:59,592|Started
+2014-12-22 18:28:43,042|Started
+2014-12-22 18:28:43,042|printDictionnary ************
+2014-12-22 18:28:43,042|key : Product04 : value : {'JL': '120', 'JT': '120'}
+2014-12-22 18:28:43,042|key : Product05 : value : {'JL': '120', 'JT': '120'}
+2014-12-22 18:28:43,043|key : Product06 : value : {'JL': '120', 'JT': '120'}
+2014-12-22 18:28:43,043|key : Product01 : value : {'JL': '120', 'JT': '100'}
+2014-12-22 18:28:43,043|key : Product02 : value : {'JL': '120', 'JT': '120'}
+2014-12-22 18:28:43,043|key : Product03 : value : {'JL': '120', 'JT': '120', 'SYNC': '120'}
+2014-12-22 18:28:43,043|printDictionnary ************
+2014-12-22 18:28:43,043|key : Product04 : value : {'JL': '120', 'JT': '120'}
+2014-12-22 18:28:43,043|key : Product05 : value : {'JL': '120', 'JT': '120'}
+2014-12-22 18:28:43,043|key : Product06 : value : {'JT': '120', 'JL': '120'}
+2014-12-22 18:28:43,043|key : Product07 : value : {'JT': '120'}
+2014-12-22 18:28:43,043|key : Product01 : value : {'JL': '120', 'JT': '101'}
+2014-12-22 18:28:43,043|key : Product02 : value : {'JL': '120', 'JT': '120'}
+2014-12-22 18:28:43,043|key : Product03 : value : {'JL': '120', 'JT': '120', 'SYNC': '120'}
+2014-12-22 18:28:43,044|compareDictionnaries ************
+2014-12-22 18:28:43,044|Difference : Product : Product01  : TypeFilm : JT: 1st : 100 : 2nd : 101
+2014-12-22 18:28:43,044|Product only in Second file : Product07 : values : {'JT': '120'}
+2014-12-22 18:28:43,044|Finished

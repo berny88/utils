@@ -1,15 +1,12 @@
 # -*- coding: utf-8 -*-
 import logging
 import csv
-from datetime import datetime
+import sys
 
 import structcsv
 
-startDateTime = datetime.today()
-print startDateTime
 
-
-#
+# ******************
 #Return a Dictionnary of Product for one file
 def ExtractProductList(src):
     #
@@ -26,20 +23,21 @@ def ExtractProductList(src):
 # parse one row and populate the dictionnary
 def populateOneKey(productList, row):
     #exclude header
-    if (not row[0] == "Category"):
-        if (not row[1] in productList):
+    if (not row[0] == "TYPEEXPORT"):
+        if (not row[2] in productList):
             #print "pas trouve " + row[1]
             productDict = dict()
-            productList[row[1]] = productDict
-        productDict = productList[row[1]]
-        if row[2] == "JL":
-            productDict["JL"] = row[3]
-        if row[2] == "JT":
-            productDict["JT"] = row[3]
-        if row[2] == "SYNC":
-            productDict["SYNC"] = row[3]
+            productList[row[2]] = productDict
+        productDict = productList[row[2]]
+        if row[3] == "JL":
+            productDict["JL"] = row[4]
+        if row[3] == "JT":
+            productDict["JT"] = row[4]
+        if row[3] == "SYNC":
+            productDict["SYNC"] = row[4]
 
 
+# *****************************
 # display the content of a dictionnary
 def printDictionnary(theDict):
     logging.debug("printDictionnary ************")
@@ -47,6 +45,7 @@ def printDictionnary(theDict):
         logging.debug("key : %s : value : %s", key, value)
 
 
+# ****************************
 # compare the 2 dictionnaries
 def compareDictionnaries(firstDict, secondDict):
     #compare 1st key with the 2nd
@@ -72,14 +71,16 @@ def compareDictionnaries(firstDict, secondDict):
                  product, productValuesInSecondFile)
 
 
+# ************************
+#
 def main():
-    logging.basicConfig(format='%(asctime)s %(message)s',
+    logging.basicConfig(format='%(asctime)s|%(message)s',
         filename='myapp.log', level=logging.DEBUG)
     logging.info('Started')
     try:
         # Open the 2 files
-        firstFile = open("FilmA.csv", "r")
-        secondFile = open("FilmB.csv", "r")
+        firstFile = open(sys.argv[1], "r")
+        secondFile = open(sys.argv[2], "r")
         # Populate dictionnaries
         firstProductDict = ExtractProductList(firstFile)
         secondProductDict = ExtractProductList(secondFile)
