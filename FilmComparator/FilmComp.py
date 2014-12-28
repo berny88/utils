@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 import logging
-import csv
 import sys
-
-import structcsv
+import FilmFile
+import pickle
+import json
 #
 # Syntax : python FilmComp.py File1.csv File2.csv
 # build a structure of data for each Product : the structure defines
@@ -18,50 +18,13 @@ import structcsv
 # QTY : quantity of parts for a product code
 
 
-# ******************
-#Return a Dictionnary of Product for one file
-def ExtractProductList(src):
-    #
-    #
-    reader = csv.reader(src, structcsv.MyCsvDialect())
-    productList = dict()
-    # Puis les données
-    for row in reader:
-        populateOneKey(productList, row)
-    return productList
-
-
-# ******************
-# parse one row and populate the dictionnary
-def populateOneKey(productList, row):
-    #exclude header
-    if (not row[0] == "TYPEEXPORT"):
-        if (not row[2] in productList):
-            #print "pas trouve " + row[1]
-            productDict = dict()
-            productList[row[2]] = productDict
-        productDict = productList[row[2]]
-        if row[3] == "JL":
-            productDict["JL"] = row[4]
-        if row[3] == "JT":
-            productDict["JT"] = row[4]
-        if row[3] == "SYNC":
-            productDict["SYNC"] = row[4]
-
-
-# *****************************
-# display the content of a dictionnary
-def printDictionnary(theDict, fileName):
-    logging.debug("printDictionnary : %s ************", fileName)
-    for key, value in theDict.iteritems():
-        logging.debug("key : %s : value : %s", key, value)
-
-
 # ****************************
 # compare the 2 dictionnaries
 def compareDictionnaries(firstDict, secondDict):
     #compare 1st key with the 2nd
-    logging.info("compareDictionnaries ************")
+    logging.info("compareDictionnaries")
+    logging.info("dict %s", firstDict)
+    logging.info("dict %s", secondDict)
     for product in firstDict.keys():
         productValuesInFirstFile = firstDict.get(product)
         productValuesInSecondFile = secondDict.get(product)
@@ -74,7 +37,7 @@ def compareDictionnaries(firstDict, secondDict):
                     productValuesInFirstFile.get(typeFilm),
                     productValuesInSecondFile.get(typeFilm))
         else:
-            print "Product only in First file : ", product
+            logging.info("Product only in First file : %s", product)
     for product in secondDict.keys():
         productValuesInFirstFile = firstDict.get(product)
         productValuesInSecondFile = secondDict.get(product)
@@ -86,25 +49,26 @@ def compareDictionnaries(firstDict, secondDict):
 # ************************
 #
 def main():
-    logging.basicConfig(format='%(asctime)s|%(message)s',
+    logging.basicConfig(format='%(asctime)s|%(levelname)s|%(message)s',
         filename='myapp.log', level=logging.DEBUG)
     logging.info('Started')
-    try:
-        # Open the 2 files
-        firstFile = open(sys.argv[1], "r")
-        secondFile = open(sys.argv[2], "r")
-        # Populate dictionnaries
-        firstProductDict = ExtractProductList(firstFile)
-        secondProductDict = ExtractProductList(secondFile)
-        #display to console
-        printDictionnary(firstProductDict, sys.argv[1])
-        printDictionnary(secondProductDict, sys.argv[2])
-        # compare dictionnaries
-        compareDictionnaries(firstProductDict, secondProductDict)
-    finally:
-        # Close files
-        firstFile.close()
-        secondFile.close()
+    # load the 2 files
+    # Populate dictionnary
+    filmA = FilmFile.FilmFile(sys.argv[1])
+    filmB = FilmFile.FilmFile(sys.argv[2])
+    #display to console
+    filmA.printDictionnary()
+    filmB.printDictionnary()
+    # compare dictionnaries
+    compareDictionnaries(filmA.productList, filmB.productList)
+    with open('FilmComparator.txt', 'w') \
+        as fichier:
+        #print json.dumps(filmA.productList, indent=4)
+        json.dump(filmA.productList, fichier, indent=4)
+        #fichier.write(json.dump(filmA))
+        # enregistrement ...
+        #mon_pickler.dump(filmA)
+
     logging.info('Finished')
 
 if __name__ == '__main__':
