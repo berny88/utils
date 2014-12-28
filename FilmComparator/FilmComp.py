@@ -2,7 +2,6 @@
 import logging
 import sys
 import FilmFile
-import pickle
 import json
 #
 # Syntax : python FilmComp.py File1.csv File2.csv
@@ -61,13 +60,15 @@ def main():
     filmB.printDictionnary()
     # compare dictionnaries
     compareDictionnaries(filmA.productList, filmB.productList)
-    with open('FilmComparator.txt', 'w') \
+    with open('FilmA.txt', 'w') \
         as fichier:
         #print json.dumps(filmA.productList, indent=4)
-        json.dump(filmA.productList, fichier, indent=4)
-        #fichier.write(json.dump(filmA))
-        # enregistrement ...
-        #mon_pickler.dump(filmA)
+        json.dump(filmA, fichier, indent=4, default=FilmFile.FilmFile.jdefault)
+
+    with open('FilmB.txt', 'w') \
+        as fichier:
+        #print json.dumps(filmB.productList, indent=4)
+        json.dump(filmB, fichier, indent=4, default=FilmFile.FilmFile.jdefault)
 
     logging.info('Finished')
 
