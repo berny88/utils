@@ -52,7 +52,7 @@ class Play:
         for row in self.map:
             #print(row)
             for cell in row:
-                print(cell, end="")
+                print(cell, end = "")
             print("")
 
     def locateRobot(self):
@@ -117,7 +117,8 @@ class Play:
         #print(oldCar, newCar)
         if (oldCar == "U" and newCar == "X"):
             print("Bravo, vous avez gagné !!!!!")
-            return False #Quit
+            #Quit
+            return False
         return True
 
     def canMove(self, direction, robot, newPosX, newPosY):
@@ -204,6 +205,7 @@ def splitRow(row):
         result.append(pos)
     return result
 
+
 def displayFirstMenu(playList):
     """Display the main menu and control the choice"""
     choiceInt = -1
@@ -246,12 +248,14 @@ def menu():
     else:
         play = playList[choiceInt]
         enterAction(play)
+
+
 # ************************
 #
 def main():
     logging.basicConfig(format='%(asctime)s|%(levelname)s|%(message)s',
         filename='exo1.log', level=logging.DEBUG)
-    logging.info('Started')#
+    logging.info('Started')
     menu()
     logging.info('Finished')
 

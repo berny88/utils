@@ -1,2 +1,6 @@
 *.csv
 *.log
+FilmA.txt
+FilmB.txt
+*.pyc
+__py*
