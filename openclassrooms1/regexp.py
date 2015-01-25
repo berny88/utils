@@ -2,10 +2,15 @@ from tkinter import *
 import re
 import argparse
 
+"""
+Exemple de gestion de paramètres en ligne de commande
+"""
+
 parser = argparse.ArgumentParser()
 parser.add_argument("-f", help="filename")
 parser.add_argument("-se", help="string which excludes")
-parser.add_argument("-ui", help="string which excludes", action="store_true")
+parser.add_argument("-ui", help="to display a simple windows", \
+    action="store_true")
 
 
 args = parser.parse_args()
